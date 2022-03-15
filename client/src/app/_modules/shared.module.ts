@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NgModuleDecorator } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
       positionClass: 'toast-bottom-right'
     }),
     TabsModule.forRoot(),
-    NgxGalleryModule
+    NgxGalleryModule,
+    BrowserAnimationsModule
   ],
   exports: [
     BsDropdownModule,
